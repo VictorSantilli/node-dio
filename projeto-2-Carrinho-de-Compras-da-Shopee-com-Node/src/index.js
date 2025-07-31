@@ -13,9 +13,12 @@ const item2 = await createItem("mouse", 39.99 , 3);
 await cartService.addItem(myCart, item1);
 await cartService.addItem(myCart, item2);
 
+await cartService.displayCart(myCart);
+
 await cartService.deleteItem(myCart, item2.name);
 await cartService.deleteItem(myCart, item1.name);
 
-console.log("Shopee Cart TOTAL IS")
+
+
 
 await cartService.calculateTotal(myCart);
